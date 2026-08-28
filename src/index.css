@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --color-primary: #ec4899;
+  --color-primary-hover: #db2777;
+  --color-primary-light: #F0F3BD;
+  --color-harmony-dark: #000000;
+  --color-harmony-teal: #028090;
+  --color-harmony-mint: #00A896;
+  --color-harmony-turquoise: #02C39A;
+  --color-harmony-cream: #F0F3BD;
+  --color-harmony-cream-light: #FAFCE6;
+  --color-harmony-bg: #FAFDE4;
+  --color-harmony-card: #FDFFF2;
+  --color-harmony-soft: #E6EECC;
+  
+  --color-slate-950: #000000;
+  --color-slate-900: #000000;
+  --color-slate-800: #000000;
+  --color-slate-700: #0d0d0d;
+  --color-slate-600: #141414;
+  --color-slate-500: #1c1c1c;
+  --color-slate-400: #2b2b2b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-harmony-bg);
+  color: #000000;
+  overflow-x: hidden;
+}
+
+/* Ensure all text inputs, textareas, and select elements have high-contrast black text */
+input, textarea, select {
+  color: #000000 !important;
+}
+
+input::placeholder, textarea::placeholder {
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Custom Grid background and Floating Section Card utility classes mapped to Turquoise Harmony */
+.bg-grid-pattern {
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(to right, rgba(5, 102, 141, 0.09) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(5, 102, 141, 0.09) 1px, transparent 1px);
+  background-color: #e0f2fe; /* Cool blue light background (sky-100) */
+  border-radius: 2.5rem; /* rounded-3xl for premium bento panel layout */
+  border: 1px solid rgba(5, 102, 141, 0.15);
+  box-shadow: 
+    0 20px 40px -15px rgba(5, 102, 141, 0.08),
+    0 10px 20px -10px rgba(5, 102, 141, 0.04);
+}
+
+.floating-section-card {
+  background: linear-gradient(135deg, var(--color-harmony-card) 65%, var(--color-harmony-cream) 100%);
+  border-radius: 2rem; /* rounded-3xl */
+  border: 1px solid rgba(2, 128, 144, 0.18);
+  box-shadow: 
+    0 25px 50px -12px rgba(5, 102, 141, 0.09), 
+    0 12px 24px -10px rgba(5, 102, 141, 0.05),
+    0 0 40px 2px rgba(2, 168, 150, 0.03);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.floating-section-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 30px 60px -15px rgba(5, 102, 141, 0.14), 
+    0 16px 32px -10px rgba(5, 102, 141, 0.07),
+    0 0 50px 4px rgba(2, 168, 150, 0.04);
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

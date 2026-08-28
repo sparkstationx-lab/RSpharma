@@ -1,0 +1,8 @@
+{
+  "name": "RS Pharma new",
+  "description": "Trusted Pharmaceutical Distribution Partner - Delivering quality medicines and healthcare products with reliability, integrity, and excellence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
