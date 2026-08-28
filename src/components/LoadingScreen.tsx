@@ -32,16 +32,21 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
             {/* Spinning & Pulsating Brand Icon */}
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: [1, 1.08, 1], opacity: 1 }}
+              animate={{ scale: [1, 1.05, 1], opacity: 1 }}
               transition={{
                 duration: 1.5,
                 repeat: Infinity,
                 repeatType: "reverse",
                 ease: "easeInOut",
               }}
-              className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-primary to-blue-500 flex items-center justify-center text-white shadow-xl shadow-primary/20 mb-6"
+              className="w-24 h-24 rounded-3xl bg-white flex items-center justify-center shadow-xl shadow-slate-200/50 mb-6 overflow-hidden border border-slate-100"
             >
-              <Activity className="w-8 h-8 animate-pulse" />
+              <img
+                src="/pharmalogo.jpg"
+                alt="RS Pharma Logo"
+                className="w-full h-full object-contain p-2"
+                referrerPolicy="no-referrer"
+              />
             </motion.div>
 
             {/* Brand Name */}

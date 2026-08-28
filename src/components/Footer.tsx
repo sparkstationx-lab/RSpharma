@@ -39,6 +39,14 @@ export default function Footer() {
           {/* Logo & Intro */}
           <div className="space-y-5">
             <Link to="/" className="flex items-center gap-2.5 group cursor-pointer">
+              <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center text-primary shadow-md overflow-hidden border border-harmony-teal/20">
+                <img
+                  src="/pharmalogo.jpg"
+                  alt="RS Pharma Logo"
+                  className="w-full h-full object-contain p-1"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
               <span className="font-display font-black text-xl tracking-tight text-white group-hover:text-harmony-turquoise transition-colors duration-200">
                 RS Pharma
               </span>

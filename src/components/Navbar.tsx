@@ -62,16 +62,20 @@ export default function Navbar() {
             <Link
               id="logo-brand-link"
               to="/"
-              className="flex items-center gap-3 group cursor-pointer"
+              className="flex items-center group cursor-pointer"
             >
-              <div className="flex flex-col">
-                <span className="font-display font-bold text-xl tracking-tight text-white group-hover:text-harmony-cream transition-colors duration-300">
-                  RS Pharma
-                </span>
-                <span className="text-[10px] text-harmony-cream/90 font-bold tracking-wider uppercase -mt-0.5">
-                  Healthcare Distribution
-                </span>
-              </div>
+              <motion.div 
+                whileHover={{ scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                className="h-12 sm:h-14 rounded-xl bg-white flex items-center justify-center shadow-md overflow-hidden border border-harmony-teal/20 px-3"
+              >
+                <img
+                  src="/pharmalogo.jpg"
+                  alt="RS Pharma Logo"
+                  className="h-full w-auto object-contain py-1.5"
+                  referrerPolicy="no-referrer"
+                />
+              </motion.div>
             </Link>
 
             {/* Desktop Navigation */}
