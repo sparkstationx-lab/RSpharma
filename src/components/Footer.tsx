@@ -81,6 +81,18 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/team" className="text-harmony-cream/75 hover:text-harmony-turquoise transition-colors duration-200 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-harmony-turquoise/40" />
+                  <span>Our Team</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/certificates" className="text-harmony-cream/75 hover:text-harmony-turquoise transition-colors duration-200 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-harmony-turquoise/40" />
+                  <span>Certificates</span>
+                </Link>
+              </li>
+              <li>
                 <Link to="/contact" className="text-harmony-cream/75 hover:text-harmony-turquoise transition-colors duration-200 flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-harmony-turquoise/40" />
                   <span>Contact & Inquiries</span>

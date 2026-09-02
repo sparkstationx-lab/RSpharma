@@ -14,6 +14,8 @@ import Contact from "./pages/Contact";
 import Products from "./pages/Products";
 import ProductDetail from "./pages/ProductDetail";
 import Certificates from "./pages/Certificates";
+import Team from "./pages/Team";
+import TeamMemberDetail from "./pages/TeamMemberDetail";
 import LoadingScreen from "./components/LoadingScreen";
 import FloatingButtons from "./components/FloatingButtons";
 
@@ -48,6 +50,8 @@ function AnimatedAppRoutes() {
           <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/products/:id" element={<ProductDetail />} />
           <Route path="/about" element={<About />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/team/:id" element={<TeamMemberDetail />} />
           <Route path="/certificates" element={<Certificates />} />
           <Route path="/contact" element={<Contact />} />
           {/* Fallback routing */}
