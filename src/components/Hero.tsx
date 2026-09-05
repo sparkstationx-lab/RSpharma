@@ -28,9 +28,17 @@ export default function Hero() {
       id="hero-section"
       className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-slate-950 text-white py-24 md:py-36"
     >
-      {/* Background Image with elegant overlay */}
-      <div 
-        className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center bg-no-repeat transform scale-102"
+      {/* Background Image with subtle, slow zoom-in animation effect */}
+      <motion.div 
+        initial={{ scale: 1 }}
+        animate={{ scale: 1.08 }}
+        transition={{
+          duration: 18,
+          ease: "easeInOut",
+          repeat: Infinity,
+          repeatType: "reverse",
+        }}
+        className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center bg-no-repeat will-change-transform"
         style={{ filter: "brightness(0.35)" }}
       />
       
