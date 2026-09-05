@@ -81,7 +81,7 @@ export default function Products() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.4 }}
-      className="min-h-screen bg-grid-pattern pt-24 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-10"
+      className="min-h-screen pt-28 pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-12"
     >
       {/* 1. HERO HEADER */}
       <section id="products-hero-section" className="bg-harmony-card border border-harmony-teal/20 rounded-3xl p-6 sm:p-10 md:p-12 shadow-sm relative overflow-hidden">

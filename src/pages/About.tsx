@@ -113,8 +113,8 @@ export default function About() {
         </div>
       </section>
 
-      {/* PAGE WRAPPER WITH GRID PATTERN FOR ALL SUBSEQUENT SECTIONS */}
-      <div className="bg-grid-pattern py-12 md:py-20 space-y-12 md:space-y-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      {/* FLUID MAIN CONTENT WRAPPER FOR ALL SUBSEQUENT SECTIONS */}
+      <div className="py-16 md:py-24 space-y-16 md:space-y-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
 
         {/* 2. COMPANY INTRODUCTION - FLOATING CARD */}
         <section id="company-introduction-section" className="floating-section-card p-6 sm:p-10 md:p-14 lg:p-16">

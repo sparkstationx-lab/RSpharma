@@ -63,16 +63,16 @@ export default function Home() {
       {/* 1B. PROMINENT TRUST INDICATORS & PARTNERSHIP BAR */}
       <TrustBar />
 
-      {/* PAGE WRAPPER WITH GRID PATTERN */}
-      <div className="bg-grid-pattern py-16 md:py-24 space-y-16 md:space-y-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      {/* FLUID MAIN CONTENT AREA WITH NATURAL VERTICAL RHYTHM */}
+      <div className="py-16 md:py-24 space-y-20 md:space-y-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         
         {/* 2. KEY SERVICE BENEFITS WITH STRUCTURED BULLETED LISTS */}
         <KeyBenefits />
 
-        {/* 3. MASTER COHESIVE BENTO GRID SECTION */}
-        <section id="master-bento-section" className="space-y-12">
-          {/* Header */}
-          <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        {/* 3. FLUID INFRASTRUCTURE & OPERATIONAL CAPABILITIES SHOWCASE */}
+        <section id="infrastructure-capabilities-section" className="space-y-12">
+          {/* Section Header */}
+          <div className="text-center max-w-3xl mx-auto space-y-4">
             <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-harmony-cream border border-harmony-teal/25 text-primary rounded-full text-xs font-bold tracking-wider uppercase shadow-3xs">
               <Pill className="w-3.5 h-3.5 text-primary animate-pulse" />
               <span>Pharmaceutical Supply Hub</span>
@@ -80,404 +80,333 @@ export default function Home() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-harmony-dark tracking-tight font-display leading-tight">
               A Resilient, High-Performance Infrastructure
             </h2>
-            <p className="text-harmony-dark/85 text-sm sm:text-base font-normal max-w-2xl mx-auto">
-              Explore our WHO-GDP compliant distribution networks, audited clinical depots, and ethical operations structured within a unified, multi-dimensional grid.
+            <p className="text-harmony-dark/85 text-sm sm:text-base font-normal max-w-2xl mx-auto leading-relaxed">
+              Explore our WHO-GDP compliant distribution networks, audited clinical depots, and ethical operations designed for seamless hospital and institutional supply.
             </p>
           </div>
 
-          {/* Master Bento Grid */}
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 auto-rows-auto"
-          >
+          {/* Fluid Layout Flow */}
+          <div className="space-y-8">
             
-            {/* CARD 1: ABOUT RS PHARMA (MEGA CARD - Span 2 Cols, 2 Rows on lg) */}
+            {/* 1. HERO FACILITY SPOTLIGHT & CORPORATE NARRATIVE */}
             <motion.div
-              id="bento-card-about"
-              variants={cardVariants}
-              whileHover={{
-                y: -6,
-                boxShadow: "0 25px 45px -15px rgba(2, 195, 154, 0.15), 0 10px 20px -10px rgba(2, 195, 154, 0.05)",
-              }}
-              className="lg:col-span-2 lg:row-span-2 md:col-span-2 col-span-1 bg-harmony-card p-6 sm:p-8 rounded-3xl border border-harmony-teal/15 shadow-sm hover:border-harmony-teal/35 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+              id="facility-spotlight-card"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="bg-harmony-card p-6 sm:p-10 md:p-12 rounded-3xl border border-harmony-teal/15 shadow-sm hover:border-harmony-teal/35 transition-all duration-300 relative overflow-hidden"
             >
-              <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-harmony-dark via-harmony-teal to-harmony-turquoise transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-              
-              <div className="space-y-4">
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-harmony-cream border border-harmony-teal/20 text-primary rounded-full text-xs font-bold uppercase tracking-wide">
-                  <Sparkles className="w-3.5 h-3.5" />
-                  <span>Corporate Operations</span>
-                </div>
-                
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-harmony-dark tracking-tight font-display leading-tight">
-                  Connecting Global Sourcing with Local Clinical Excellence
-                </h3>
-                
-                <p className="text-harmony-dark/85 text-sm sm:text-base leading-relaxed font-normal">
-                  RS Pharma operates as an established, regulated pharmaceutical wholesale partner. We bridge the gap between global manufacturers and regional clinical trial centers, hospitals, and pharmacies, ensuring absolute authenticity and rapid delivery.
-                </p>
+              <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+                <div className="w-full lg:w-7/12 space-y-5 text-left">
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-harmony-cream border border-harmony-teal/20 text-primary rounded-full text-xs font-bold uppercase tracking-wide">
+                    <Sparkles className="w-3.5 h-3.5" />
+                    <span>Corporate Operations</span>
+                  </div>
+                  
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-harmony-dark tracking-tight font-display leading-tight">
+                    Connecting Global Sourcing with Local Clinical Excellence
+                  </h3>
+                  
+                  <p className="text-harmony-dark/85 text-sm sm:text-base leading-relaxed font-normal">
+                    RS Pharma operates as an established, regulated pharmaceutical wholesale partner. We bridge the gap between global manufacturers and regional clinical trial centers, hospitals, and pharmacies, ensuring absolute authenticity and rapid delivery.
+                  </p>
 
-                <div className="relative rounded-2xl overflow-hidden border border-harmony-teal/10 aspect-video w-full mt-4 group-hover:border-primary/20 transition-all duration-300">
-                  <img
-                    src="https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&w=800&q=80"
-                    alt="RS Pharma modern sterile laboratory equipment"
-                    referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-700"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent flex items-end p-4">
-                    <p className="text-white text-xs font-bold tracking-wide font-sans">
-                      Verified WHO-GDP Storage Facilities
-                    </p>
+                  <div className="pt-2 flex flex-wrap items-center gap-4">
+                    <Link
+                      to="/about"
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary-hover text-white rounded-xl text-xs font-bold shadow-xs hover:shadow-md transition-all duration-200 group/link cursor-pointer"
+                    >
+                      <span>Learn More About Us</span>
+                      <ArrowRight className="w-3.5 h-3.5 transform group-hover/link:translate-x-1 transition-transform duration-200" />
+                    </Link>
+
+                    <span className="text-xs font-semibold text-harmony-dark/70 flex items-center gap-1.5">
+                      <ShieldCheck className="w-4 h-4 text-emerald-600" />
+                      WHO-GDP Certified Depots
+                    </span>
+                  </div>
+                </div>
+
+                <div className="w-full lg:w-5/12">
+                  <div className="relative rounded-2xl overflow-hidden border border-harmony-teal/15 aspect-16/10 shadow-sm group">
+                    <img
+                      src="https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&w=800&q=80"
+                      alt="RS Pharma modern sterile laboratory equipment"
+                      referrerPolicy="no-referrer"
+                      className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-700"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-5">
+                      <div className="text-white space-y-0.5">
+                        <p className="text-xs font-bold tracking-wide font-sans">
+                          Verified WHO-GDP Storage Facilities
+                        </p>
+                        <p className="text-[10px] text-white/80">
+                          Climate-controlled staging & batch verification
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-
-              <div className="pt-6">
-                <Link
-                  to="/about"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary hover:bg-primary-hover text-white rounded-xl text-xs font-bold shadow-xs hover:shadow-md transition-all duration-200 group/link cursor-pointer"
-                >
-                  <span>Learn More About Us</span>
-                  <ArrowRight className="w-3.5 h-3.5 transform group-hover/link:translate-x-1 transition-transform duration-200" />
-                </Link>
-              </div>
             </motion.div>
 
-            {/* CARD 2: QUALITY MEDICINES */}
-            <motion.div
-              id="bento-card-quality-medicines"
-              variants={cardVariants}
-              whileHover={{
-                y: -6,
-                boxShadow: "0 25px 45px -15px rgba(2, 195, 154, 0.15)",
-              }}
-              className="lg:col-span-1 md:col-span-1 col-span-1 bg-harmony-card p-6 sm:p-8 rounded-3xl border border-harmony-teal/15 shadow-sm hover:border-harmony-teal/35 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
-            >
-              <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-harmony-dark to-harmony-teal transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+            {/* 2. FOUR CORE OPERATIONAL PILLARS (FLUID RESPONSIVE ROW) */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
               
-              <div className="space-y-4">
-                <div className="p-3 bg-harmony-bg text-primary rounded-xl inline-block border border-harmony-teal/10 group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                  <Award className="w-6 h-6 text-harmony-dark/80 group-hover:text-white transition-colors duration-300" />
-                </div>
-                
-                <div>
-                  <h4 className="text-lg font-bold text-harmony-dark font-display group-hover:text-primary transition-colors duration-300">
-                    Quality Medicines
-                  </h4>
-                  <p className="text-[10px] text-harmony-mint font-bold uppercase tracking-wider mt-0.5">
-                    WHO-GMP Certified
-                  </p>
-                </div>
-                
-                <p className="text-harmony-dark/80 text-sm leading-relaxed font-normal">
-                  Sourced exclusively from heavily audited manufacturers holding active WHO-GMP, FDA, or ISO accreditations.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* CARD 3: RELIABLE DISTRIBUTION */}
-            <motion.div
-              id="bento-card-reliable-distribution"
-              variants={cardVariants}
-              whileHover={{
-                y: -6,
-                boxShadow: "0 25px 45px -15px rgba(2, 195, 154, 0.15)",
-              }}
-              className="lg:col-span-1 md:col-span-1 col-span-1 bg-harmony-card p-6 sm:p-8 rounded-3xl border border-harmony-teal/15 shadow-sm hover:border-harmony-teal/35 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
-            >
-              <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-harmony-teal to-harmony-mint transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-              
-              <div className="space-y-4">
-                <div className="p-3 bg-harmony-bg text-primary rounded-xl inline-block border border-harmony-teal/10 group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                  <Truck className="w-6 h-6 text-harmony-dark/80 group-hover:text-white transition-colors duration-300" />
-                </div>
-                
-                <div>
-                  <h4 className="text-lg font-bold text-harmony-dark font-display group-hover:text-primary transition-colors duration-300">
-                    Reliable Distribution
-                  </h4>
-                  <p className="text-[10px] text-harmony-mint font-bold uppercase tracking-wider mt-0.5">
-                    Continuous Temperature Logs
-                  </p>
-                </div>
-                
-                <p className="text-harmony-dark/80 text-sm leading-relaxed font-normal">
-                  Advanced cold-chain monitoring ensures delicate pharmaceutical cargo stays within absolute compliant brackets.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* CARD 4: EXPERIENCED TEAM */}
-            <motion.div
-              id="bento-card-experienced-team"
-              variants={cardVariants}
-              whileHover={{
-                y: -6,
-                boxShadow: "0 25px 45px -15px rgba(2, 195, 154, 0.15)",
-              }}
-              className="lg:col-span-1 md:col-span-1 col-span-1 bg-harmony-card p-6 sm:p-8 rounded-3xl border border-harmony-teal/15 shadow-sm hover:border-harmony-teal/35 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
-            >
-              <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-harmony-mint to-harmony-turquoise transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-              
-              <div className="space-y-4">
-                <div className="p-3 bg-harmony-bg text-primary rounded-xl inline-block border border-harmony-teal/10 group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                  <Users className="w-6 h-6 text-harmony-dark/80 group-hover:text-white transition-colors duration-300" />
-                </div>
-                
-                <div>
-                  <h4 className="text-lg font-bold text-harmony-dark font-display group-hover:text-primary transition-colors duration-300">
-                    Experienced Board
-                  </h4>
-                  <p className="text-[10px] text-harmony-mint font-bold uppercase tracking-wider mt-0.5">
-                    GDP Guidelines
-                  </p>
-                </div>
-                
-                <p className="text-harmony-dark/80 text-sm leading-relaxed font-normal">
-                  Led by expert pharmacists and clinical logistical operators specialized in safe Good Distribution Practices.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* CARD 5: DEDICATED CUSTOMER CARE */}
-            <motion.div
-              id="bento-card-customer-care"
-              variants={cardVariants}
-              whileHover={{
-                y: -6,
-                boxShadow: "0 25px 45px -15px rgba(2, 195, 154, 0.15)",
-              }}
-              className="lg:col-span-1 md:col-span-1 col-span-1 bg-harmony-card p-6 sm:p-8 rounded-3xl border border-harmony-teal/15 shadow-sm hover:border-harmony-teal/35 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
-            >
-              <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-harmony-turquoise to-harmony-cream transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-              
-              <div className="space-y-4">
-                <div className="p-3 bg-harmony-bg text-primary rounded-xl inline-block border border-harmony-teal/10 group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                  <HeartHandshake className="w-6 h-6 text-harmony-dark/80 group-hover:text-white transition-colors duration-300" />
-                </div>
-                
-                <div>
-                  <h4 className="text-lg font-bold text-harmony-dark font-display group-hover:text-primary transition-colors duration-300">
-                    Dedicated Support
-                  </h4>
-                  <p className="text-[10px] text-harmony-mint font-bold uppercase tracking-wider mt-0.5">
-                    24/7 Sourcing Help
-                  </p>
-                </div>
-                
-                <p className="text-harmony-dark/80 text-sm leading-relaxed font-normal">
-                  Sourcing agents standing by to coordinate high-volume procurement paperwork and urgent custom order clearance.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* CARD 6: CORE VALUE - INTEGRITY */}
-            <motion.div
-              id="bento-card-integrity"
-              variants={cardVariants}
-              whileHover={{
-                y: -6,
-                boxShadow: "0 25px 45px -15px rgba(2, 195, 154, 0.15)",
-              }}
-              className="lg:col-span-1 md:col-span-1 col-span-1 bg-harmony-card p-6 sm:p-8 rounded-3xl border border-harmony-teal/15 shadow-sm hover:border-harmony-teal/35 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
-            >
-              <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-harmony-dark to-harmony-cream transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-              
-              <div className="space-y-4">
-                <div className="p-3 bg-harmony-bg text-primary rounded-xl inline-block border border-harmony-teal/10 group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                  <Scale className="w-6 h-6 text-harmony-dark/80 group-hover:text-white transition-colors duration-300" />
-                </div>
-                
-                <div>
-                  <h4 className="text-lg font-bold text-harmony-dark font-display group-hover:text-primary transition-colors duration-300">
-                    Absolute Integrity
-                  </h4>
-                  <p className="text-[10px] text-harmony-mint font-bold uppercase tracking-wider mt-0.5">
-                    Core Philosophy
-                  </p>
-                </div>
-                
-                <p className="text-harmony-dark/80 text-sm leading-relaxed font-normal">
-                  Strictly adhering to ethical contracts, non-counterfeit sourcing, and legal drug-distribution compliance.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* CARD 7: CORE VALUE - RESILIENCE & TRUST */}
-            <motion.div
-              id="bento-card-trust"
-              variants={cardVariants}
-              whileHover={{
-                y: -6,
-                boxShadow: "0 25px 45px -15px rgba(2, 195, 154, 0.15)",
-              }}
-              className="lg:col-span-1 md:col-span-1 col-span-1 bg-harmony-card p-6 sm:p-8 rounded-3xl border border-harmony-teal/15 shadow-sm hover:border-harmony-teal/35 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
-            >
-              <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-harmony-teal via-harmony-mint to-harmony-turquoise transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-              
-              <div className="space-y-4">
-                <div className="p-3 bg-harmony-bg text-primary rounded-xl inline-block border border-harmony-teal/10 group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                  <Heart className="w-6 h-6 text-harmony-dark/80 group-hover:text-white transition-colors duration-300" />
-                </div>
-                
-                <div>
-                  <h4 className="text-lg font-bold text-harmony-dark font-display group-hover:text-primary transition-colors duration-300">
-                    Supply Resilience
-                  </h4>
-                  <p className="text-[10px] text-harmony-mint font-bold uppercase tracking-wider mt-0.5">
-                    Patient Safeguards
-                  </p>
-                </div>
-                
-                <p className="text-harmony-dark/80 text-sm leading-relaxed font-normal">
-                  We verify tracking lineages from point of manufacture to ensure 100% genuine bio-pharma distribution.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* CARD 8: COMPETITIVE SOURCING (Span 2 Cols on lg) */}
-            <motion.div
-              id="bento-card-pricing"
-              variants={cardVariants}
-              whileHover={{
-                y: -6,
-                boxShadow: "0 25px 45px -15px rgba(2, 195, 154, 0.15)",
-              }}
-              className="lg:col-span-2 md:col-span-2 col-span-1 bg-harmony-card p-6 sm:p-8 rounded-3xl border border-harmony-teal/15 shadow-sm hover:border-harmony-teal/35 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
-            >
-              <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-harmony-dark to-harmony-turquoise transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-              
-              <div className="space-y-4 text-left">
-                <div className="flex items-center gap-4">
+              {/* PILLAR 1: QUALITY MEDICINES */}
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.05 }}
+                whileHover={{ y: -4 }}
+                className="bg-harmony-card p-6 rounded-2xl border border-harmony-teal/15 shadow-xs hover:border-harmony-teal/35 transition-all duration-300 flex flex-col justify-between group text-left space-y-4"
+              >
+                <div className="space-y-3">
                   <div className="p-3 bg-harmony-bg text-primary rounded-xl inline-block border border-harmony-teal/10 group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                    <Tag className="w-6 h-6 text-harmony-dark/80 group-hover:text-white transition-colors duration-300" />
+                    <Award className="w-5 h-5 text-harmony-dark/80 group-hover:text-white transition-colors duration-300" />
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold text-harmony-dark font-display group-hover:text-primary transition-colors duration-300">
-                      Competitive Pricing & direct sourcing
+                    <h4 className="text-base font-bold text-harmony-dark font-display group-hover:text-primary transition-colors duration-300">
+                      Quality Medicines
                     </h4>
-                    <p className="text-xs text-harmony-mint font-bold uppercase tracking-wider">
-                      Zero Intermediary Inflation
+                    <p className="text-[10px] text-harmony-mint font-bold uppercase tracking-wider mt-0.5">
+                      WHO-GMP Certified
                     </p>
                   </div>
+                  <p className="text-harmony-dark/80 text-xs leading-relaxed font-normal">
+                    Sourced exclusively from audited manufacturers holding active WHO-GMP, FDA, or ISO accreditations.
+                  </p>
                 </div>
-                
-                <p className="text-harmony-dark/85 text-sm leading-relaxed font-normal pt-2">
-                  By executing multi-year direct procurement agreements with major manufacturers internationally, we cut out speculative middlemen. This solidifies stable, transparent, and fair pricing which we pass directly on to hospital cooperatives and procurement groups.
-                </p>
-              </div>
-            </motion.div>
+              </motion.div>
 
-            {/* CARD 9: TIMELY DELIVERY (Span 2 Cols on lg) */}
-            <motion.div
-              id="bento-card-delivery"
-              variants={cardVariants}
-              whileHover={{
-                y: -6,
-                boxShadow: "0 25px 45px -15px rgba(2, 195, 154, 0.15)",
-              }}
-              className="lg:col-span-2 md:col-span-2 col-span-1 bg-harmony-card p-6 sm:p-8 rounded-3xl border border-harmony-teal/15 shadow-sm hover:border-harmony-teal/35 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
-            >
-              <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-harmony-teal via-harmony-mint to-harmony-turquoise transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-              
-              <div className="space-y-4 text-left">
-                <div className="flex items-center gap-4">
+              {/* PILLAR 2: RELIABLE DISTRIBUTION */}
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.1 }}
+                whileHover={{ y: -4 }}
+                className="bg-harmony-card p-6 rounded-2xl border border-harmony-teal/15 shadow-xs hover:border-harmony-teal/35 transition-all duration-300 flex flex-col justify-between group text-left space-y-4"
+              >
+                <div className="space-y-3">
                   <div className="p-3 bg-harmony-bg text-primary rounded-xl inline-block border border-harmony-teal/10 group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                    <Clock className="w-6 h-6 text-harmony-dark/80 group-hover:text-white transition-colors duration-300" />
+                    <Truck className="w-5 h-5 text-harmony-dark/80 group-hover:text-white transition-colors duration-300" />
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold text-harmony-dark font-display group-hover:text-primary transition-colors duration-300">
-                      Express Freight & Outage Prevention
+                    <h4 className="text-base font-bold text-harmony-dark font-display group-hover:text-primary transition-colors duration-300">
+                      Cold Chain Logistics
                     </h4>
-                    <p className="text-xs text-harmony-mint font-bold uppercase tracking-wider">
-                      Zero-Loss Cold Transport
+                    <p className="text-[10px] text-harmony-mint font-bold uppercase tracking-wider mt-0.5">
+                      2°C to 8°C Monitored
                     </p>
                   </div>
+                  <p className="text-harmony-dark/80 text-xs leading-relaxed font-normal">
+                    Active cold-chain telemetry ensures delicate biologicals stay strictly within compliant thermal brackets.
+                  </p>
                 </div>
-                
-                <p className="text-harmony-dark/85 text-sm leading-relaxed font-normal pt-2">
-                  We map express transit corridors daily to safeguard delicate therapeutic inventory. Our delivery dispatch team ensures critical therapeutics bypass standard logistical congestion, arriving on schedule with 100% active, verified temperature-log validation tags.
-                </p>
-              </div>
-            </motion.div>
+              </motion.div>
 
-            {/* CARD 10: REAL-TIME OPERATIONAL HUB (Span 2 Cols on lg) */}
-            <motion.div
-              id="bento-card-realtime-tracker"
-              variants={cardVariants}
-              whileHover={{
-                y: -6,
-                boxShadow: "0 25px 45px -15px rgba(2, 195, 154, 0.15)",
-              }}
-              className="lg:col-span-2 md:col-span-2 col-span-1 bg-harmony-card p-6 sm:p-8 rounded-3xl border border-harmony-teal/15 shadow-sm hover:border-harmony-teal/35 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden text-left"
-            >
-              <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-harmony-dark to-harmony-mint transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+              {/* PILLAR 3: EXPERIENCED TEAM */}
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.15 }}
+                whileHover={{ y: -4 }}
+                className="bg-harmony-card p-6 rounded-2xl border border-harmony-teal/15 shadow-xs hover:border-harmony-teal/35 transition-all duration-300 flex flex-col justify-between group text-left space-y-4"
+              >
+                <div className="space-y-3">
+                  <div className="p-3 bg-harmony-bg text-primary rounded-xl inline-block border border-harmony-teal/10 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                    <Users className="w-5 h-5 text-harmony-dark/80 group-hover:text-white transition-colors duration-300" />
+                  </div>
+                  <div>
+                    <h4 className="text-base font-bold text-harmony-dark font-display group-hover:text-primary transition-colors duration-300">
+                      Expert Pharmacists
+                    </h4>
+                    <p className="text-[10px] text-harmony-mint font-bold uppercase tracking-wider mt-0.5">
+                      GDP Guidelines
+                    </p>
+                  </div>
+                  <p className="text-harmony-dark/80 text-xs leading-relaxed font-normal">
+                    Supervised by licensed clinical logisticians ensuring precise regulatory adherence and handling.
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* PILLAR 4: DEDICATED SUPPORT */}
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.2 }}
+                whileHover={{ y: -4 }}
+                className="bg-harmony-card p-6 rounded-2xl border border-harmony-teal/15 shadow-xs hover:border-harmony-teal/35 transition-all duration-300 flex flex-col justify-between group text-left space-y-4"
+              >
+                <div className="space-y-3">
+                  <div className="p-3 bg-harmony-bg text-primary rounded-xl inline-block border border-harmony-teal/10 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                    <HeartHandshake className="w-5 h-5 text-harmony-dark/80 group-hover:text-white transition-colors duration-300" />
+                  </div>
+                  <div>
+                    <h4 className="text-base font-bold text-harmony-dark font-display group-hover:text-primary transition-colors duration-300">
+                      Dedicated Support
+                    </h4>
+                    <p className="text-[10px] text-harmony-mint font-bold uppercase tracking-wider mt-0.5">
+                      24/7 Sourcing Help
+                    </p>
+                  </div>
+                  <p className="text-harmony-dark/80 text-xs leading-relaxed font-normal">
+                    Dedicated account specialists coordinating bulk hospital paperwork and urgent order clearance.
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* 3. FLUID DUAL HIGHLIGHT CARDS: INTEGRITY & DIRECT SOURCING */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               
-              <div className="space-y-6">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
+              {/* CARD A: ABSOLUTE INTEGRITY & RESILIENCE */}
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="bg-harmony-card p-6 sm:p-8 rounded-3xl border border-harmony-teal/15 shadow-xs hover:border-harmony-teal/35 transition-all duration-300 flex flex-col justify-between text-left space-y-6"
+              >
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="p-3 bg-harmony-bg text-primary rounded-xl border border-harmony-teal/10">
+                      <Scale className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold text-harmony-dark font-display">
+                        Absolute Integrity & Patient Safeguards
+                      </h4>
+                      <p className="text-xs text-harmony-mint font-bold uppercase tracking-wider">
+                        Zero-Tolerance Anti-Counterfeit Policy
+                      </p>
+                    </div>
+                  </div>
+
+                  <p className="text-harmony-dark/85 text-sm leading-relaxed font-normal">
+                    We strictly uphold ethical wholesale standards, full DSCA batch traceability, and non-counterfeit procurement. Every vial, blister, and ampoule distributed through our channel is verified against manufacturer records to safeguard patient health.
+                  </p>
+                </div>
+
+                <div className="pt-4 border-t border-harmony-teal/10 flex items-center justify-between text-xs text-harmony-dark/80">
+                  <span className="font-semibold flex items-center gap-1.5 text-emerald-700">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                    100% Verified Batch Origin
+                  </span>
+                  <Link to="/about" className="text-primary hover:text-primary-hover font-bold inline-flex items-center gap-1">
+                    <span>Read Policy</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </motion.div>
+
+              {/* CARD B: DIRECT SOURCING & EXPRESS FREIGHT */}
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="bg-harmony-card p-6 sm:p-8 rounded-3xl border border-harmony-teal/15 shadow-xs hover:border-harmony-teal/35 transition-all duration-300 flex flex-col justify-between text-left space-y-6"
+              >
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="p-3 bg-harmony-bg text-primary rounded-xl border border-harmony-teal/10">
+                      <Tag className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold text-harmony-dark font-display">
+                        Direct Sourcing & Express Freight
+                      </h4>
+                      <p className="text-xs text-harmony-mint font-bold uppercase tracking-wider">
+                        Zero Intermediary Inflation
+                      </p>
+                    </div>
+                  </div>
+
+                  <p className="text-harmony-dark/85 text-sm leading-relaxed font-normal">
+                    By partnering directly with pharmaceutical manufacturers like Senores Pharmaceuticals and Concord Biotech, we eliminate middleman markups. We map express transit routes daily to prevent ICU and clinical trial stockouts.
+                  </p>
+                </div>
+
+                <div className="pt-4 border-t border-harmony-teal/10 flex items-center justify-between text-xs text-harmony-dark/80">
+                  <span className="font-semibold flex items-center gap-1.5 text-primary">
+                    <Clock className="w-4 h-4 text-primary" />
+                    Emergency Hospital Dispatch Available
+                  </span>
+                  <Link to="/products" className="text-primary hover:text-primary-hover font-bold inline-flex items-center gap-1">
+                    <span>View Pricing</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* 4. FLUID LIVE DEPOT TELEMETRY & COMPLIANCE STRIP */}
+            <motion.div
+              id="depot-live-telemetry-banner"
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="bg-gradient-to-r from-harmony-dark via-slate-900 to-harmony-dark text-white p-6 sm:p-8 rounded-3xl border border-white/10 shadow-lg relative overflow-hidden"
+            >
+              <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 relative z-10">
+                <div className="space-y-2 text-left">
+                  <div className="flex items-center gap-3">
                     <span className="relative flex h-3.5 w-3.5">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                       <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-500"></span>
                     </span>
-                    <span className="text-xs font-bold text-harmony-dark font-sans uppercase tracking-wider">
-                      Gwalior HQ Depot Live
+                    <span className="text-xs font-bold text-emerald-400 uppercase tracking-widest font-mono">
+                      Gwalior HQ Logistics Depot Live
+                    </span>
+                    <span className="text-[10px] font-mono text-white/70 bg-white/10 px-2.5 py-0.5 rounded-full border border-white/15">
+                      Wholesale-819-A
                     </span>
                   </div>
-                  <div className="text-[10px] font-bold text-primary font-mono tracking-wider bg-harmony-cream px-2 py-0.5 rounded border border-harmony-teal/20">
-                    License No: Wholesale-819-A
-                  </div>
-                </div>
-
-                <div className="space-y-1">
-                  <h4 className="text-lg font-bold text-harmony-dark font-display">
-                    National Distribution Compliance
+                  <h4 className="text-xl sm:text-2xl font-black text-white font-display">
+                    PAN-India Verified Distribution Network
                   </h4>
-                  <p className="text-xs text-harmony-dark/75">
-                    Climate controlled corridors tracking and batch security protocols
+                  <p className="text-xs sm:text-sm text-harmony-cream/80 max-w-xl font-normal">
+                    Active temperature-monitored distribution supporting hospitals, healthcare facilities, and accredited institutions across all Indian states.
                   </p>
                 </div>
 
-                {/* Sub-Bento Info Grid inside Card 10 */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-                  <div className="bg-harmony-bg/60 p-3.5 rounded-2xl border border-harmony-teal/10 text-center">
-                    <p className="text-lg font-extrabold text-primary">100%</p>
-                    <p className="text-[10px] text-harmony-dark/75 mt-0.5 font-medium uppercase tracking-wider">
-                      DSCA Lineage
-                    </p>
+                <div className="flex flex-wrap items-center gap-4 sm:gap-6 self-stretch lg:self-auto justify-between lg:justify-end border-t lg:border-t-0 border-white/10 pt-4 lg:pt-0">
+                  <div className="text-center px-4 py-2 bg-white/5 rounded-2xl border border-white/10">
+                    <p className="text-xl font-black text-harmony-turquoise font-display">100%</p>
+                    <p className="text-[10px] text-white/70 uppercase tracking-wider font-semibold">DSCA Lineage</p>
                   </div>
-                  <div className="bg-harmony-bg/60 p-3.5 rounded-2xl border border-harmony-teal/10 text-center">
-                    <p className="text-lg font-extrabold text-primary">2-8°C</p>
-                    <p className="text-[10px] text-harmony-dark/75 mt-0.5 font-medium uppercase tracking-wider">
-                      Active Cold Chain
-                    </p>
-                  </div>
-                  <div className="bg-harmony-bg/60 p-3.5 rounded-2xl border border-harmony-teal/10 text-center">
-                    <p className="text-lg font-extrabold text-primary">All States</p>
-                    <p className="text-[10px] text-harmony-dark/75 mt-0.5 font-medium uppercase tracking-wider">
-                      PAN India Delivery
-                    </p>
-                  </div>
-                </div>
-              </div>
 
-              <div className="pt-6 border-t border-harmony-teal/10 flex items-center justify-between text-xs text-harmony-dark/80">
-                <span className="font-semibold flex items-center gap-1">
-                  <Globe className="w-3.5 h-3.5 text-harmony-mint" />
-                  India Wholesale Grid Active
-                </span>
-                <Link to="/contact" className="text-primary hover:text-primary-hover font-bold inline-flex items-center gap-1 group/btn">
-                  <span>Contact Now</span>
-                  <ArrowRight className="w-3 h-3 transform group-hover/btn:translate-x-1 transition-transform" />
-                </Link>
+                  <div className="text-center px-4 py-2 bg-white/5 rounded-2xl border border-white/10">
+                    <p className="text-xl font-black text-harmony-mint font-display">2-8°C</p>
+                    <p className="text-[10px] text-white/70 uppercase tracking-wider font-semibold">Active Cold Chain</p>
+                  </div>
+
+                  <div className="text-center px-4 py-2 bg-white/5 rounded-2xl border border-white/10">
+                    <p className="text-xl font-black text-harmony-cream font-display">All States</p>
+                    <p className="text-[10px] text-white/70 uppercase tracking-wider font-semibold">PAN India</p>
+                  </div>
+
+                  <Link
+                    to="/contact"
+                    className="px-5 py-3 bg-primary hover:bg-primary-hover text-white rounded-xl text-xs font-bold transition-all shadow-md flex items-center gap-2 shrink-0"
+                  >
+                    <span>Inquire Now</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
               </div>
             </motion.div>
 
-          </motion.div>
+          </div>
         </section>
 
         {/* 3. FEATURED PRODUCTS HIGHLIGHT SECTION */}

@@ -86,7 +86,7 @@ export default function ProductDetail() {
   // Handle case where product is not found
   if (!product) {
     return (
-      <div className="min-h-screen bg-grid-pattern pt-28 pb-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center space-y-6">
+      <div className="min-h-screen pt-36 pb-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center space-y-6">
         <div className="p-4 bg-amber-50 border border-amber-200 text-amber-800 rounded-2xl max-w-md mx-auto inline-flex items-center gap-2">
           <AlertCircle className="w-5 h-5 shrink-0" />
           <span className="text-xs font-bold">Product ID "{id}" was not found in catalog.</span>
@@ -121,7 +121,7 @@ export default function ProductDetail() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.35 }}
-      className="min-h-screen bg-grid-pattern pt-24 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-10"
+      className="min-h-screen pt-28 pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-12"
     >
       {/* 1. BREADCRUMBS & TOP NAVIGATION */}
       <nav id="product-detail-breadcrumbs" className="flex flex-wrap items-center justify-between gap-4">
